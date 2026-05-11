@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStore</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <h2>🛒 MyStore</h2>
+
+    <div>
+      <a href="mena.html">Home</a>
+
+      <a href="cart.html">
+        Cart (<span id="cartCount">0</span>)
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <h1>Welcome to MyStore 🛍️</h1>
+
+    <p>Best Products with Best Prices</p>
+
+  </header>
+
+<section class="products">
+
+  <!-- 1 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600" alt="Smart Watch">
+    <h3>Smart Watch</h3>
+    <p>800 EGP</p>
+    <button onclick="addToCart('Smart Watch',800)">Add To Cart</button>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=600" alt="Gaming Keyboard">
+    <h3>Gaming Keyboard</h3>
+    <p>300 EGP</p>
+    <button onclick="addToCart('Gaming Keyboard',300)">Add To Cart</button>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600" alt="Gaming Mouse">
+    <h3>Gaming Mouse</h3>
+    <p>400 EGP</p>
+    <button onclick="addToCart('Gaming Mouse',400)">Add To Cart</button>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="Laptop HP">
+    <h3>Laptop HP</h3>
+    <p>50000 EGP</p>
+    <button onclick="addToCart('Laptop HP',50000)">Add To Cart</button>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="iPhone">
+    <h3>iPhone</h3>
+    <p>90000 EGP</p>
+    <button onclick="addToCart('iPhone',90000)">Add To Cart</button>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Headphones">
+    <h3>Headphones</h3>
+    <p>700 EGP</p>
+    <button onclick="addToCart('Headphones',700)">Add To Cart</button>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=600" alt="Bluetooth Speaker">
+    <h3>Bluetooth Speaker</h3>
+    <p>500 EGP</p>
+    <button onclick="addToCart('Bluetooth Speaker',500)">Add To Cart</button>
+  </div>
+
+  <!-- 8 -->
+  <div class="card"><img src="https://th.bing.com/th/id/OIP.zBPpDoWJnX6NfnDrsnINRQHaHa?w=200&h=200&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Power Bank">
+    <h3>Power Bank</h3>
+    <p>350 EGP</p>
+    <button onclick="addToCart('Power Bank',350)">Add To Cart</button>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=600" alt="USB Cable">
+    <h3>USB Cable</h3>
+    <p>50 EGP</p>
+    <button onclick="addToCart('USB Cable',50)">Add To Cart</button>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1613141412501-9012977f1969?w=600" alt="Mouse Pad">
+    <h3>Mouse Pad</h3>
+    <p>80 EGP</p>
+    <button onclick="addToCart('Mouse Pad',80)">Add To Cart</button>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600" alt="Monitor">
+    <h3>Monitor</h3>
+    <p>7000 EGP</p>
+    <button onclick="addToCart('Monitor',7000)">Add To Cart</button>
+  </div>
+
+  <!-- 12 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600" alt="Gaming Chair">
+    <h3>Gaming Chair</h3>
+    <p>3500 EGP</p>
+    <button onclick="addToCart('Gaming Chair',3500)">Add To Cart</button>
+  </div>
+
+  <!-- 13 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Camera">
+    <h3>Camera</h3>
+    <p>9000 EGP</p>
+    <button onclick="addToCart('Camera',9000)">Add To Cart</button>
+  </div>
+
+  <!-- 14 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600" alt="Microphone">
+    <h3>Microphone</h3>
+    <p>600 EGP</p>
+    <button onclick="addToCart('Microphone',600)">Add To Cart</button>
+  </div>
+
+  <!-- 15 -->
+  <div class="card">
+<img src="https://th.bing.com/th/id/OIP.vJc1Y2IoiaBcJvr1eWbFVwHaEp?w=276&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="MacBook">
+    <h3>MacBook</h3>
+    <p>85000 EGP</p>
+    <button onclick="addToCart('MacBook',85000)">Add To Cart</button>
+  </div>
+
+  <!-- 16 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600" alt="Tablet">
+    <h3>Tablet</h3>
+    <p>12000 EGP</p>
+    <button onclick="addToCart('Tablet',12000)">Add To Cart</button>
+  </div>
+
+  <!-- 17 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600" alt="SSD 1TB">
+    <h3>SSD 1TB</h3>
+    <p>2500 EGP</p>
+    <button onclick="addToCart('SSD 1TB',2500)">Add To Cart</button>
+  </div>
+
+  <!-- 18 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=600" alt="HDD 2TB">
+    <h3>HDD 2TB</h3>
+    <p>1800 EGP</p>
+    <button onclick="addToCart('HDD 2TB',1800)">Add To Cart</button>
+  </div>
+
+  <!-- 19 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600" alt="Router">
+    <h3>Router</h3>
+    <p>1200 EGP</p>
+    <button onclick="addToCart('Router',1200)">Add To Cart</button>
+  </div>
+
+  <!-- 20 -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600" alt="Printer">
+    <h3>Printer</h3>
+    <p>3500 EGP</p>
+    <button onclick="addToCart('Printer',3500)">Add To Cart</button>
+  </div>
+
+</section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
