@@ -1,124 +1,103 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
 
-/* ADD TO CART */
-
-function addToCart(name, price){
-
-  cart.push({
-    name:name,
-    price:price
-  });
-
-  saveCart();
-
-  updateCartCount();
-
-  alert(name + " Added To Cart");
+function addToCart(name,price){
+cart.push({name,price});
+saveCart();
+updateCartCount();
+showMessage(name+" Added To Cart ✅");
 }
-
-/* SAVE */
 
 function saveCart(){
-
-  localStorage.setItem(
-    "cart",
-    JSON.stringify(cart)
-  );
+localStorage.setItem("cart",JSON.stringify(cart));
 }
-
-/* UPDATE COUNT */
 
 function updateCartCount(){
-
-  let count =
-  document.getElementById("cartCount");
-
-  if(count){
-
-    count.innerText = cart.length;
-  }
+let count=document.getElementById("cartCount");
+if(count)count.innerText=cart.length;
 }
-
-/* LOAD CART */
 
 function loadCart(){
+let container=document.getElementById("cartItems");
+if(!container)return;
 
-  let container =
-  document.getElementById("cartItems");
+container.innerHTML="";
+let total=0;
 
-  if(!container) return;
+cart.forEach((item,index)=>{
+total+=item.price;
 
-  container.innerHTML = "";
+container.innerHTML+=`
+<div class="card">
+<h3>${item.name}</h3>
+<p>${item.price} EGP</p>
+<button onclick="removeItem(${index})">Remove</button>
+</div>
+`;
+});
 
-  let total = 0;
-
-  cart.forEach((item,index)=>{
-
-    total += item.price;
-
-    container.innerHTML += `
-
-      <div class="item">
-
-        <h2>${item.name}</h2>
-
-        <p>${item.price} EGP</p>
-
-        <button onclick="removeItem(${index})">
-          Remove
-        </button>
-
-      </div>
-
-    `;
-  });
-
-  container.innerHTML += `
-
-    <div class="item">
-
-      <h2>Total: ${total} EGP</h2>
-
-      <button onclick="clearCart()">
-        Clear Cart
-      </button>
-
-    </div>
-
-  `;
+container.innerHTML+=`
+<div class="card">
+<h3>Total: ${total} EGP</h3>
+<button onclick="clearCart()">Clear Cart</button>
+</div>
+`;
 }
-
-/* REMOVE ITEM */
 
 function removeItem(index){
-
-  cart.splice(index,1);
-
-  saveCart();
-
-  loadCart();
-
-  updateCartCount();
+cart.splice(index,1);
+saveCart();
+loadCart();
+updateCartCount();
 }
-
-/* CLEAR CART */
 
 function clearCart(){
-
-  cart = [];
-
-  saveCart();
-
-  loadCart();
-
-  updateCartCount();
+cart=[];
+saveCart();
+loadCart();
+updateCartCount();
 }
 
-/* ON LOAD */
+function showMessage(text){
+let msg=document.createElement("div");
 
-window.onload = function(){
+msg.innerText=text;
+msg.style.position="fixed";
+msg.style.bottom="20px";
+msg.style.right="20px";
+msg.style.background="#22c55e";
+msg.style.color="white";
+msg.style.padding="15px 20px";
+msg.style.borderRadius="12px";
+msg.style.zIndex="9999";
 
-  updateCartCount();
+document.body.appendChild(msg);
 
-  loadCart();
+setTimeout(()=>{
+msg.remove();
+},2000);
+}
+
+function filterProducts(category){
+let products=document.querySelectorAll(".products .card");
+
+products.forEach(card=>{
+
+if(category==="all"){
+card.style.display="block";
+}
+
+else if(card.classList.contains(category)){
+card.style.display="block";
+}
+
+else{
+card.style.display="none";
+}
+
+});
+}
+
+window.onload=function(){
+updateCartCount();
+loadCart();
 }
